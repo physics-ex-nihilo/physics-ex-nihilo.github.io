@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<link rel="stylesheet" href="/assets/css/styles.css">
+	{% feed_meta %}
+    {% seo %}
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="{{ site.baseurl }}/favicon.png" type="image/png" />
+  </head>
+  
+  <body>
+    <div class="header">
+	  <div class="container">
+		<img src="/favicon2.png" alt="Snow" width="250" height="250">
+		<div class="centered">
+		  <h1>physics ex nihilo</h1>
+		  <h2>Let's talk science.</h2>
+		</div>
+	  </div>
+	</div>
+
+    <div class="topnav">
+      {% include navigation.html %}
+	   <div class="search-container">
+        <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit">Submitttttttt</button>
+    </form>
+  </div>
+    </div>
+	
+	<div class="row">
+      <div class="side">
+		<h1>Latest Post</h1>
+		  {% for post in site.posts limit:1 %}
+		    <a href="{{ post.url }}">
+			<h2>{{ post.title }}</h2>
+			</a>
+		  {% endfor %}
+		<h1>Recent Posts</h1>
+		  {% for post in site.posts offset:1 limit:2 %}
+		    <a href="{{ post.url }}">
+			<h2>{{ post.title }}</h2>
+			</a>
+		  {% endfor %}
+	  </div>
+    
+	  <div class="main">
+        {{ content }}
+	  </div>
+    </div>
+
+    <div class="footer">
+	  <div>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</a>
+	  </div>	
+	  <div>
+	    © Physics Ex Nihilo, 2018. Unauthorized use and/or duplication of this material without express and written permission from this site’s author and/or owner is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to this website with appropriate and specific direction to the original content.
+	  </div>
+    </div>
+  </body>
+</html>
