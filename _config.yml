@@ -3,3 +3,16 @@ permalink: /:year/:month/:day/:title:output_ext
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+defaults:
+  -
+    scope:
+      path:            "old_pages/*"
+    values:
+      sitemap:         false
+      
+# Tipue search settings
+tipue_search:
+  include:
+    pages: false
+  exclude:
+    files: [search.html]

@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+    {% if page.tipue_search_active or layout.tipue_search_active %}
+      <link rel="stylesheet" href="{{ "/assets/tipuesearch/css/normalize.css" | relative_url }}">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="{{ "/assets/tipuesearch/tipuesearch_content.js" | relative_url }}"></script>
+      <link rel="stylesheet" href="{{ "/assets/tipuesearch/css/tipuesearch.css" | relative_url }}">
+      <script src="{{ "/assets/tipuesearch/tipuesearch_set.js" | relative_url }}"></script>
+      <script src="{{ "/assets/tipuesearch/tipuesearch.min.js" | relative_url }}"></script>
+    {% endif %}
+    
 	  <link rel="stylesheet" href="/assets/css/styles.css">
       {% seo %}
       <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
@@ -17,19 +26,18 @@
 		    </div>
 	    </div>
 	  </div>
-
+    
+    <a id="target"></a>
+    
     <div class="topnav">
-      <a id="target"></a>
       {% include navigation.html %}
-      
-      <!--
-	    <div class="search-container">
-        <form action="/action_page.php">
-          <input type="text" placeholder="Not currently functional!" name="search">
+
+      <div class="search-container">
+        <form action="search.html">
+          <input type="text" name="q" placeholder="Search..." id="tipue_search_input">
           <button type="submit">Submitttttttt</button>
         </form>
       </div>
-      /-->
     </div>
 	
 	  <div class="row">
@@ -49,6 +57,8 @@
 	    </div>
     
 	    <div class="main">
+                <div id="tipue_search_content">
+        </div>
         {{ content }}
 	    </div>
     </div>
