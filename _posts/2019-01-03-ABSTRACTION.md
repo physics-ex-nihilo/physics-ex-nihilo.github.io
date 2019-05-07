@@ -1,7 +1,6 @@
 ---
 layout: post
 title: abstraction.
-categories: [physics ex nihilo]
 excerpt: The idea of "ideas" begins with language.
 author: r.m.
 ---
