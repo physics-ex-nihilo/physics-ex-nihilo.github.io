@@ -1,7 +1,7 @@
 body { margin: 0; font-family: garamond; font-weight: normal; }
 
 /* Header/logo Title */
-.header { padding: 60px; text-align: center; background: #970000; color: white; }
+.header { padding: 30px; text-align: center; background: #970000; color: white; }
 
 .header h1 { font-size: 40px; font-family: garamond; }
 
@@ -24,6 +24,12 @@ body { margin: 0; font-family: garamond; font-weight: normal; }
 .topnav .search-container button { float: right; padding: 6px 10px; margin-top: 8px; margin-right: 16px; background: #ddd; font-size: 17px; border: none; cursor: pointer; }
 
 .topnav .search-container button:hover { background: #ccc; }
+
+.PageNavigation { font-size: 24px; display: block; width: auto; overflow: hidden; }
+
+.PageNavigation a { display: block; width: 50%; float: left; margin: 1em 0; }
+
+.PageNavigation .next { text-align: right; }
 
 @media screen and (max-width: 600px) { .topnav .search-container { float: none; }
   .topnav a, .topnav input[type=text], .topnav .search-container button { float: none; display: block; text-align: left; width: 100%; margin: 0; padding: 14px; }
