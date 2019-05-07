@@ -1,1 +1,2 @@
 github: [metadata]
+permalink: /:year/:month/:day/:title:output_ext
