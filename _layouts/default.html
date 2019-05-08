@@ -42,6 +42,7 @@
 	
 	  <div class="row">
       <div class="side">
+        <a id="latest"></a>
 		    <h1>Latest Post</h1>
 		    {% for post in site.posts limit:1 %}
 		      <a href="{{ post.url }}#target">
