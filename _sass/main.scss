@@ -135,6 +135,17 @@ body {
   flex: 70%;
   background-color: white;
   padding: 20px;
+  font-size: 24px;
+}
+
+/* Note: font-size must be explicit in main so math scales properly (i.e. scales with [[.row p]]. By default this also increases h1 sizes in main. The following setting restores them. */
+
+.main h1 {
+  font-size: 32px;
+}
+
+.main h2 {
+  font-size: 24px;
 }
 
 /* Sidebar/left column */
@@ -161,6 +172,18 @@ body {
   
   .row p {
 	font-size: 16px;
+  }
+  
+  .main {   
+  font-size: 16px; 
+  }
+  
+  .main h1 {
+  font-size: 24px;
+  }
+  
+  .main h2 {   
+  font-size: 16px; 
   }
   
   .header {
