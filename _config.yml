@@ -1,4 +1,5 @@
 github: [metadata]
+repository: physics-ex-nihilo/physics-ex-nihilo.github.io
 permalink: /:year/:month/:day/:title:output_ext
 plugins:
   - jekyll-seo-tag
@@ -9,10 +10,18 @@ defaults:
       path:            "old_pages/*"
     values:
       sitemap:         false
-      
+
 # Tipue search settings
 tipue_search:
   include:
     pages: false
   exclude:
     files: [search.html]
+
+atom:
+  buildCommand:
+    - bundle
+    - exec
+    - jekyll
+    - build
+    - --drafts
