@@ -9,7 +9,7 @@
       <script src="{{ "/assets/tipuesearch/tipuesearch_set.js" | relative_url }}"></script>
       <script src="{{ "/assets/tipuesearch/tipuesearch.min.js" | relative_url }}"></script>
     {% endif %}
-    
+
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         "HTML-CSS": {
@@ -28,26 +28,32 @@
 
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
     </script>
-    
+
 	  <link rel="stylesheet" href="/assets/css/styles.css">
       {% seo %}
       <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
 	  <link rel="icon" href="/favicon.png" type="image/png" />
   </head>
-  
+
   <body>
     <div class="header">
 	    <div class="container">
-		    <img src="/favicon2.png" alt="Snow" width="200" height="200">
+		    <img
+          class="logo"
+          src="/favicon2.png"
+          alt="logo"
+          width="200px"
+          height="auto"
+        >
 		    <div class="centered">
 		      <h1>physics ex nihilo</h1>
 		      <h2>Let's talk science.</h2>
 		    </div>
 	    </div>
 	  </div>
-    
+
     <a id="target"></a>
-    
+
     <div class="topnav">
       {% include navigation.html %}
 
@@ -58,7 +64,7 @@
         </form>
       </div>
     </div>
-	
+
 	  <div class="row">
       <div class="side">
         <a id="latest"></a>
@@ -75,7 +81,7 @@
 		     </a>
 		    {% endfor %}
 	    </div>
-    
+
 	    <div class="main">
         <div id="tipue_search_content">
         </div>
@@ -86,7 +92,7 @@
     <div class="footer">
 	    <div>
         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</a>
-	    </div>	
+	    </div>
 	    <div>
 	      © Physics Ex Nihilo, 2019. Unauthorized use and/or duplication of this material without express and written permission from this site’s author and/or owner is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to this website with appropriate and specific direction to the original content.
 	    </div>

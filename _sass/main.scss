@@ -6,28 +6,15 @@ body {
 
 /* figure formatting */
 figure {
-  float: center;
-  width: 80%;
+  align: center;
   text-align: center;
   font-style: italic;
   font-size: smaller;
-  text-indent: 0;
-  border: thin silver solid;
-  margin: 0.5em;
+}
+
+.image {
   padding: 0.5em;
-}
-
-#outer {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
-}
-
-.itemwrapper {
-  display: table-cell;
-  vertical-align: top;
-  width: 100%;
-  padding: -20px;
+  border: 2px silver solid;
 }
 
 /* Header/logo Title */
@@ -125,23 +112,6 @@ figure {
   text-align: right;
 }
 
-@media screen and (max-width: 600px) {
-  .topnav .search-container {
-    float: none;
-  }
-  .topnav a, .topnav input[type=text], .topnav .search-container button {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-  .topnav input[type=text] {
-    border: 1px solid #ccc;
-  }
-}
-
 /* Ensure proper sizing */
 * {box-sizing: border-box;}
 
@@ -228,6 +198,10 @@ figure {
   font-size: 16px;
   }
 
+  .logo {
+    width: 150px
+  }
+
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
@@ -238,22 +212,28 @@ figure {
   }
 
 /* rescale figures at this screen width */
-  figure {
-    width: 60%;
-  }
 
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
+/* Responsive layout - when the screen is less than 600px wide, make the navigation links stack on top of each other instead of next to each other */
 
-  .navbar a {
+@media screen and (max-width: 600px) {
+
+  .topnav .search-container {
     float: none;
-    width: 100%;
   }
 
-  .itemwrapper {
-    display: table-row;
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
   }
 
 }
