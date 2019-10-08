@@ -10,6 +10,16 @@ defaults:
       path:            "old_pages/*"
     values:
       sitemap:         false
+      defaults:
+# Comment settings
+  -
+    scope:
+      path: '_posts'
+      type: posts
+    values:
+      layout: post
+      author: RM
+      commenting: open
 
 # Tipue search settings
 tipue_search:
@@ -25,3 +35,8 @@ atom:
     - jekyll
     - build
     - --drafts
+
+emptyArray: []
+
+comments:
+  receiver: https://{{your-receiver-site}}/api/PostComment}}
